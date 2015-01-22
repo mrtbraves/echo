@@ -1,10 +1,15 @@
 <?php
 
-function echo()
+function writeStuff()
 {
-  // ...
+	$arguments = func_get_args();
+  foreach ($arguments as $arg) {
+		echo ($arg)."<br>";
+	}
 }
 
-echo();
-echo('bla');
-echo('foo', 'bar', 'baz');
+writeStuff();
+writeStuff('bla');
+writeStuff('foo', 'bar', 'baz');
+
+?>
